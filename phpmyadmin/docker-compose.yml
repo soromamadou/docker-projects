@@ -1,0 +1,10 @@
+myadmmin:
+  image: phpmyadmin/phpmyadmin
+  container_name: phpmyadmin
+  restart: always
+  ports:
+   - "8801:80"
+  volumes:
+   - ./conf/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
+  external_links:
+   - mariadb:db

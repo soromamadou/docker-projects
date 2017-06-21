@@ -1,0 +1,11 @@
+db:
+  image: 'mariadb'
+  container_name: mariadb
+  restart: always
+  ports:
+   - "3600:3600"
+  environment:
+   - MYSQL_ROOT_PASSWORD "mariadbpass"
+  volumes:
+   - ./data:/var/lib/mysql
+   - ./conf:/etc/mysql/conf.d
