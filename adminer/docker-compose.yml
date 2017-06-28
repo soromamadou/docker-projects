@@ -1,0 +1,9 @@
+adminer:
+  image: adminer
+  container_name: adminer
+  restart: always
+  ports:
+   - "8802:8080"
+  external_links:
+   - postgres:postgres
+   - mariadb:mariadb

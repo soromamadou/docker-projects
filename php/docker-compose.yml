@@ -1,0 +1,13 @@
+7-fpm:
+  build: ./
+  container_name: php7-fpm
+  restart: always
+  ports:
+   - "9000:9000"
+  volumes:
+   - /var/www/html:/var/www/html
+  external_links:
+   - mariadb:db
+  environment:
+   - VIRTUAL_HOST:php7-fpm.dev
+  

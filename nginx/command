@@ -1,0 +1,1 @@
+docker run --rm --name nginx-debian -p 8088:80 -v /home/docker/nginx/deult/www:/var/www/html -v /home/docker/nginx/default/conf:/etc/nginx/conf.d --link php7-fpm:php7-fpm -d nginx

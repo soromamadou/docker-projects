@@ -1,0 +1,1 @@
+docker run --rm --name php7-fpm -v /home/docker/nginx/default/www:/var/www/html --link mariadb:db -d php:7-fpm

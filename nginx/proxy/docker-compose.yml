@@ -1,0 +1,7 @@
+nginx_proxy:
+  image: jwilder/nginx-proxy
+  container_name: nginx-proxy
+  volumes:
+   - /var/run/docker.sock:/tmp/docker.sock
+  ports:
+   - "8085:80"

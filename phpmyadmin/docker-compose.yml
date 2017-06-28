@@ -6,5 +6,6 @@ myadmmin:
    - "8801:80"
   volumes:
    - ./conf/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
+   - ./sessions:/sessions
   external_links:
    - mariadb:db

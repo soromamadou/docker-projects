@@ -1,0 +1,10 @@
+nginx:
+  image: nginx
+  container_name: nginx
+  ports:
+   - "8080:80"
+  volumes:
+   - /var/www/html:/var/www/html
+   - ./conf:/etc/nginx/conf.d
+  external_links:
+   - php7-fpm:php
